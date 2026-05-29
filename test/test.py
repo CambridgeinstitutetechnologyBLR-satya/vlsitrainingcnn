@@ -4,8 +4,6 @@ from cocotb.triggers import ClockCycles
 @cocotb.test()
 async def test_cnn_accelerator(dut):
 
-    dut._log.info("Starting CNN verification...")
-
     dut.rst_n.value = 0
     dut.ui_in.value = 0
     await ClockCycles(dut.clk, 5)
@@ -23,5 +21,4 @@ async def test_cnn_accelerator(dut):
     await ClockCycles(dut.clk, 2)
 
     result = dut.uo_out[0].value
-
     dut._log.info(f"CNN Output = {result}")
