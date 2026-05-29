@@ -1,5 +1,40 @@
 project:
   title: "1-Bit CNN Accelerator"
-  description: "A minimalist binary neural network convolution acceleration node"
-  # ... other template fields ...
-  top_module: "tt_1bit_cnn"  # Make sure this matches exactly!
+  author: "venkatesh"
+  description: "1-bit 3x3 serial CNN accelerator using XNOR convolution for Tiny Tapeout."
+  language: "Verilog"
+  clock_hz: 50000000
+  tiles: "1x1"
+  top_module: "tt_1bit_cnn"
+  source_files:
+    - "project.v"
+
+yaml_version: 6
+
+pinout:
+  ui[0]: "Pixel input"
+  ui[1]: "Data valid"
+  ui[2]: "unused"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  uo[0]: "CNN output"
+  uo[1]: "unused"
+  uo[2]: "unused"
+  uo[3]: "unused"
+  uo[4]: "unused"
+  uo[5]: "unused"
+  uo[6]: "unused"
+  uo[7]: "unused"
+
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
