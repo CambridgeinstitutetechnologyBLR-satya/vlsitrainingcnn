@@ -1,11 +1,12 @@
 project:
   title: "1-Bit CNN Accelerator"
-  author: "venkatesh"
+  author: "Satya Roop Bankuru"
   description: "1-bit 3x3 serial CNN accelerator using XNOR convolution for Tiny Tapeout."
   language: "Verilog"
   clock_hz: 50000000
   tiles: "1x1"
-top_module: "tt_um_1bit_cnn"
+  analog_pins: 0
+  top_module: "tt_um_1bit_cnn"
   source_files:
     - "project.v"
 
